@@ -141,6 +141,7 @@ header {
   background: var(--grad-clr);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  
   /* background-clip: none; */
   margin: 0.5rem 0 2rem;
 }
@@ -427,6 +428,7 @@ footer {
   background: var(--grad-clr);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
   /* background-clip: none; */
 }
 
