@@ -48,6 +48,58 @@ const btnText = document.querySelector('.btn-text');
 const menuLinks = document.querySelectorAll('.menu-link');
 const x = data.length;
 
+//Functions
+function loadSpeakers(n) {
+  for (let i = 0; i < n; i+=1) {
+    speakers.innerHTML += `
+        <div class='speaker'>
+            <div class='image-section'>
+               <img src='${data[i].image}' alt='Image of a speaker'>
+            </div>
+            <div class='text-section'>
+                <h3>${data[i].title}</h3>
+                <p class='speaker-desc'>
+                    ${data[i].desc}
+                </p>
+                <hr class='line2'/>
+                <p class='brief-info'>
+                    ${data[i].brief}
+                </p>
+            </div>
+        </div>
+        `;
+  }
+}
+
+function loadMore(n) {
+  for (let i = 2; i < n; i+=1) {
+    speakers.innerHTML += `
+        <div class='speaker added-speaker'>
+            <div class='image-section'>
+               <img src='${data[i].image}' alt='Image of a speaker'>
+            </div>
+            <div class='text-section'>
+                <h3>${data[i].title}</h3>
+                <p class='speaker-desc'>
+                    ${data[i].desc}
+                </p>
+                <hr class='line2'/>
+                <p class='brief-info'>
+                    ${data[i].brief}
+                </p>
+            </div>
+        </div>
+        `;
+  }
+}
+
+function removeSpeakers() {
+  const moreSpeakers = document.querySelectorAll('.added-speaker');
+  moreSpeakers.forEach((elem) => {
+    elem.remove();
+  });
+}
+
 openMenu.addEventListener('click', () => {
   mobileMenu.classList.add('show-menu');
 });
@@ -79,54 +131,3 @@ speakersBtn.addEventListener('click', (e) => {
     removeSpeakers();
   }
 });
-
-function loadSpeakers(n) {
-  for (let i = 0; i < n; i++) {
-    speakers.innerHTML += `
-        <div class='speaker'>
-            <div class='image-section'>
-               <img src='${data[i].image}' alt='Image of a speaker'>
-            </div>
-            <div class='text-section'>
-                <h3>${data[i].title}</h3>
-                <p class='speaker-desc'>
-                    ${data[i].desc}
-                </p>
-                <hr class='line2'/>
-                <p class='brief-info'>
-                    ${data[i].brief}
-                </p>
-            </div>
-        </div>
-        `;
-  }
-}
-
-function loadMore(n) {
-  for (let i = 2; i < n; i++) {
-    speakers.innerHTML += `
-        <div class='speaker added-speaker'>
-            <div class='image-section'>
-               <img src='${data[i].image}' alt='Image of a speaker'>
-            </div>
-            <div class='text-section'>
-                <h3>${data[i].title}</h3>
-                <p class='speaker-desc'>
-                    ${data[i].desc}
-                </p>
-                <hr class='line2'/>
-                <p class='brief-info'>
-                    ${data[i].brief}
-                </p>
-            </div>
-        </div>
-        `;
-  }
-}
-
-function removeSpeakers() {
-  const moreSpeakers = document.querySelectorAll('.added-speaker');
-  moreSpeakers.forEach((elem) => {
-    elem.remove();
-  });
-}
