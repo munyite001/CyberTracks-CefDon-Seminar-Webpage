@@ -48,9 +48,9 @@ const btnText = document.querySelector('.btn-text');
 const menuLinks = document.querySelectorAll('.menu-link');
 const x = data.length;
 
-//Functions
+//  Functions
 function loadSpeakers(n) {
-  for (let i = 0; i < n; i+=1) {
+  for (let i = 0; i < n; i += 1) {
     speakers.innerHTML += `
         <div class='speaker'>
             <div class='image-section'>
@@ -72,7 +72,7 @@ function loadSpeakers(n) {
 }
 
 function loadMore(n) {
-  for (let i = 2; i < n; i+=1) {
+  for (let i = 2; i < n; i += 1) {
     speakers.innerHTML += `
         <div class='speaker added-speaker'>
             <div class='image-section'>
