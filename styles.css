@@ -44,7 +44,6 @@ header {
 
 .top-bar {
   background-color: var(--black-clr);
-  width: 100%;
   display: none;
   height: 0;
   width: 0;
@@ -76,7 +75,6 @@ header {
   position: fixed;
   width: 100%;
   transform: translateX(-100%);
-  width: 100%;
   top: 0;
   height: 100vh;
   background-color: var(--black-clr);
@@ -143,7 +141,7 @@ header {
   background: var(--grad-clr);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  /* background-clip: none; */
   margin: 0.5rem 0 2rem;
 }
 
@@ -239,6 +237,19 @@ header {
 .program-item .image-container .image {
   width: 3rem;
   margin: 0 0.5rem 0 0;
+}
+
+.arrow-icon img {
+  width: 100%;
+}
+
+.partner-logo-container img {
+  width: 100%;
+}
+
+.overlay img {
+  width: 100%;
+  opacity: 0.5;
 }
 
 .image-container .image img {
@@ -377,10 +388,6 @@ header {
   width: 1rem;
 }
 
-.arrow-icon img {
-  width: 100%;
-}
-
 .patners {
   width: 100%;
   background-color: var(--black-clr);
@@ -396,10 +403,6 @@ header {
 
 .partner-logo-container {
   width: 7rem;
-}
-
-.partner-logo-container img {
-  width: 100%;
 }
 
 footer {
@@ -424,7 +427,7 @@ footer {
   background: var(--grad-clr);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
+  /* background-clip: none; */
 }
 
 .footer-wrapper .text-content {
@@ -514,8 +517,9 @@ footer {
     align-items: center;
   }
 
-  .nav-list :nth-child(1) a {
-    color: var(--coral-clr);
+  .back-to-home a {
+    color: var(--coral-clr) !important;
+    font-family: var(--ff-lato);
   }
 
   .nav-list li a {
@@ -525,14 +529,13 @@ footer {
     color: var(--black-clr);
   }
 
+  .nav-list :nth-child(1) a {
+    color: var(--coral-clr);
+  }
+
   .back-to-home {
     padding: 0.5rem;
     border: 4px solid var(--coral-clr);
-  }
-
-  .back-to-home a {
-    color: var(--coral-clr) !important;
-    font-family: var(--ff-lato);
   }
 
   .home {
@@ -721,9 +724,11 @@ footer {
   align-items: center;
 }
 
-.overlay img {
-  width: 100%;
-  opacity: 0.5;
+.overlay-text {
+  font-weight: 400;
+  font-family: var(--ff-lato);
+  color: var(--white-clr);
+  font-size: 18px;
 }
 
 .overlay .overlay-text {
@@ -738,13 +743,6 @@ footer {
   font-family: var(--ff-lato);
   color: var(--white-clr);
   margin: 0 0 1rem;
-}
-
-.overlay-text {
-  font-weight: 400;
-  font-family: var(--ff-lato);
-  color: var(--white-clr);
-  font-size: 18px;
 }
 
 @media screen and (min-width: 768px) {
