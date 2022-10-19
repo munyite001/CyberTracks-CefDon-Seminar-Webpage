@@ -10,6 +10,8 @@
 
 ## Live Preview
 
+- See the [Live](https://munyite001.github.io/CyberTracks-CefDon-Seminar-Webpage/) website
+
 ## Setup for Basic HTML/CSS Project
 
 - Linter for HTML/CSS installed
@@ -30,9 +32,11 @@
 
 - ### Mobile Version
 
-  - Responsive Web Design for mobile, tablet and Desktop.
+  - Responsive Web Design for mobile and Desktop.
+  ![Mobile Screenshot](./assets/Screenshots/Screenshot%20Mobile.png)
 
 - ### Desktop Version
+![Desktop Screenshot](./assets/Screenshots/Screenshot%20Desktop.png)
 
 ## Prerequisites
 
