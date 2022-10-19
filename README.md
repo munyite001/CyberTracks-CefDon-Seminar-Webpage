@@ -90,3 +90,6 @@
 ## CREDITS
 
 - [Design by Cindy Shin](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) on Behance.
+
+
+Link to video walkthrough: [Loom Video](https://www.loom.com/share/655372d1ce114e96b587635463559efe)
